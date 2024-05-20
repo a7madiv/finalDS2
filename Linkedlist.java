@@ -102,53 +102,53 @@ public class Linkedlist {
         }
     }
 
-    public void removeFirst() {
-        if(isEmpty()) {
-            System.out.println("LL is empty");
-            return;
-        }
-        if(head.next == null) {
-            head = null;
-            return;
-        }
-        head = head.next;
-    }
+    // public void removeFirst() {
+    //     if(isEmpty()) {
+    //         System.out.println("LL is empty");
+    //         return;
+    //     }
+    //     if(head.next == null) {
+    //         head = null;
+    //         return;
+    //     }
+    //     head = head.next;
+    // }
 
-    public void removeLast() {
-        if(isEmpty()) {
-            System.out.println("LL is empty");
-            return;
-        }
-        if(head.next == null) {
-            head = null;
-            return;
-        }
-        Node current = head;
-        while (current.next.next != null) {
-            current = current.next;
-        }
-        current.next = null;
-    }
+    // public void removeLast() {
+    //     if(isEmpty()) {
+    //         System.out.println("LL is empty");
+    //         return;
+    //     }
+    //     if(head.next == null) {
+    //         head = null;
+    //         return;
+    //     }
+    //     Node current = head;
+    //     while (current.next.next != null) {
+    //         current = current.next;
+    //     }
+    //     current.next = null;
+    // }
 
-    public void removeElement(String name) {
-        if(isEmpty()) {
-            System.out.println("LL is empty");
-            return;
-        }
-        if (head.name.equals(name)) {
-            head = head.next;
-            return;
-        }
-        Node current = head;
-        while (current != null && current.next != null && !current.next.name.equals(name)) {
-            current = current.next;
-        }
-        if (current == null || current.next == null) {
-            System.out.println("LL doesn't have this value");
-            return;
-        }
-        current.next = current.next.next;
-    }
+    // public void removeElement(String name) {
+    //     if(isEmpty()) {
+    //         System.out.println("LL is empty");
+    //         return;
+    //     }
+    //     if (head.name.equals(name)) {
+    //         head = head.next;
+    //         return;
+    //     }
+    //     Node current = head;
+    //     while (current != null && current.next != null && !current.next.name.equals(name)) {
+    //         current = current.next;
+    //     }
+    //     if (current == null || current.next == null) {
+    //         System.out.println("LL doesn't have this value");
+    //         return;
+    //     }
+    //     current.next = current.next.next;
+    // }
 
     public Node getHead() {
         if(isEmpty()) {
