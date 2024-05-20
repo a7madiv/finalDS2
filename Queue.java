@@ -13,9 +13,8 @@ public class Queue {
         }
         newNode.next = head;
         head = newNode;
-        if(front==null){
             front=head;
-        }
+
  }
  boolean isEmpty() {
         return head == null;

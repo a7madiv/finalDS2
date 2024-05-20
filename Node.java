@@ -7,24 +7,27 @@ public class Node {
     String category;
     Node next;
 
-    public Node(String name, Date dueDate, boolean priority, String category){
+    public Node(String name, Date dueDate, boolean priority, String category) {
         this.name = name;
         this.dueDate = dueDate;
         this.priority = priority;
         this.category = category;
         this.next = null;
     }
-    public String getName(){
+
+    public String getName() {
         return name;
     }
-    public Date getDueDate(){
+
+    public Date getDueDate() {
         return dueDate;
     }
-    public boolean getPriority(){
+
+    public boolean getPriority() {
         return priority;
     }
-    public String getCategory(){
+
+    public String getCategory() {
         return category;
     }
-
 }

@@ -1,22 +1,26 @@
 public class Stack {
     Node head;
-    Node top;
-    public Stack(){
-        this.head = null;
-        this.top = null;
+
+    public Stack() {
+        head = null;
     }
-    void push(Node newNode){
-        if(isEmpty()) {
-            head =top= newNode;
-            return;
-        }
-        newNode.next = head;
-        head = newNode;
-        if(top==null){
-            top=head;
-        }
-    }
-    boolean isEmpty() {
+
+    public boolean isEmpty() {
         return head == null;
+    }
+
+    public void push(Node node) {
+        node.next = head;
+        head = node;
+    }
+
+    public Node pop() {
+        if (isEmpty()) {
+            return null;
+        }
+        Node temp = head;
+        head = head.next;
+        temp.next = null;
+        return temp;
     }
 }
